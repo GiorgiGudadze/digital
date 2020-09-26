@@ -1,0 +1,925 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 60px;
+}
+
+.logo-container p:nth-child(1) {
+    position: relative;
+    font-size: 23px;
+}
+
+.logo-container p:nth-child(2) {
+    position: relative;
+    font-size: 18px;
+}
+
+.flex1 {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 850px;
+}
+
+.sideCover {
+    display: none;
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex2Mob {
+    display: none;
+    align-items: center;
+}
+
+.flex3 {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.flex1 .ctg-cnt a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+    padding: 31px 0px;
+}
+
+.ctg-cnt {
+    line-height: 80px;
+    position: relative;
+}
+
+.ctg-cnt:hover .ctg-hover {
+    opacity: 1;
+}
+
+.ctg-cnt:hover a {
+    color: red;
+}
+
+.ctg-hover {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background: red;
+    height: 1px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.register-cnt {
+    border-radius: 5px;
+    background: #00A8E7;
+    width: 120px;
+    text-align: center;
+    transition: .5s;
+    height: 50px;
+    margin-right: 25px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.signupBtn a {
+    padding: 6px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.register-cnt:hover {
+    background-color: #1fc8db;
+}
+
+.login-cnt:hover {
+    background-color: #1fc8db;
+    border: 1px solid transparent;
+}
+
+.login-cnt:hover a {
+    color: #fff;
+}
+
+.register-cnt:hover a {
+    color: #000;
+}
+
+.register-cnt a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    line-height: 50px;
+    transition: .5s;
+    position: absolute;
+    left: 0;
+}
+
+.login-cnt {
+    border-radius: 5px;
+    background: #fff;
+    width: 120px;
+    height: 50px;
+    margin-left: 30px;
+    border: 1px solid #000;
+    transition: .5s;
+    text-align: center;
+    position: relative;
+}
+
+.login-cnt a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    font-size: 20px;
+    transition: .5s;
+    line-height: 48px;
+    position: absolute;
+    left: 0;
+}
+
+.wholeService {
+    margin-top: 80px;
+    position: relative;
+}
+
+#serviceTable1 {
+    padding-top: 155px !important;
+    margin: auto;
+}
+
+#serviceTable2 {
+    margin: auto;
+    margin-top: 70px !important;
+    padding-bottom: 60px;
+}
+
+.services {
+    position: relative;
+    z-index: 3;
+}
+
+.services td,
+.services th {
+    border: 1.5px solid #000;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.services tr td:nth-child(2) {
+    text-align: center;
+}
+
+.services th {
+    font-size: 20px;
+}
+
+.services td {
+    font-size: 18px;
+}
+
+.serviceImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('services.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.6;
+    background-position: center;
+    z-index: 3;
+}
+
+.pageCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: #000;
+}
+
+.homeImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('homepic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.7;
+    background-position: center;
+    z-index: 3;
+}
+
+.homeSlogan {
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff6700;
+    z-index: 3;
+    position: relative;
+    max-width: 470px;
+    margin: auto;
+}
+
+.homeCnt {
+    margin-top: 80px !important;
+    position: relative;
+    height: calc(100vh - 80px);
+}
+
+.homePicCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background: #000;
+    opacity: 0.7;
+    transition: 0s;
+}
+
+.loginForm {
+    border-radius: 5px;
+    border: 2px solid #b0b0b0;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+}
+
+.inputStyle {
+    display: block;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 20px;
+    width: 100%;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(183, 183, 183);
+    outline: none;
+}
+
+.inputStyle:focus {
+    border: 1px solid #26a69a;
+}
+
+.submitBtn {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #54cf3b;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.signupBtn {
+    background: #535353;
+    display: block;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.signupAnchor {
+    padding-top: 12px;
+    text-align: center;
+    color: #F44336;
+    font-weight: bold;
+    display: block;
+}
+
+.aboutCnt {
+    margin-top: 125px !important;
+    position: relative;
+    width: 100%;
+    max-width: 1453px;
+    margin: auto;
+    /* background: #404d40; */
+}
+
+.aboutFlex {
+    margin: 0 10px;
+    display: flex;
+}
+
+.aboutPic1 {
+    width: 100%;
+    background-image: url('paper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    background-position: center;
+    z-index: 3;
+}
+
+.aboutTxt1 {
+    width: 100%;
+    z-index: 3;
+}
+
+.questionH1 {
+    margin: 0 25px;
+    padding: 15px 0;
+    border-bottom: 1px solid #9E9E9E;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.questionP {
+    margin: 0 40px;
+    font-size: 20px;
+    color: #e8e6e6;
+    padding-top: 15px;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+}
+
+.flexAboutColumn {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.aboutPicCover {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #404d40;
+    top: 0;
+}
+
+footer {
+    width: 100%;
+    background: #616161;
+    height: 150px;
+    padding: 30px 150px;
+}
+
+.sidebarCnt {
+    display: none;
+}
+
+.socialFlex {
+    display: flex;
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #9E9E9E;
+}
+
+.contact-footer p {
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.contact-footer img {
+    display: block;
+}
+
+.contact-footer a {
+    margin-left: 15px;
+    display: block;
+}
+
+.socialCnt {
+    display: flex;
+}
+
+.actNumber {
+    display: flex;
+}
+
+.actNumber img {
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+}
+
+.actNumber h3 {
+    color: #fff;
+    font-weight: unset;
+}
+
+.mailCnt {
+    display: flex;
+}
+
+.mailCnt img {
+    display: block;
+    margin-right: 15px;
+}
+
+.mailCnt p {
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    color: #fff;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.meanContainer {
+    padding: 0 65px;
+    margin: 45px 0;
+}
+
+.meanTitle {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid grey;
+}
+
+.meanContainer p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+}
+
+.securityCnt {
+    margin: 45px 0;
+}
+
+.securityTitle {
+    padding: 63px 25px;
+    background: #404d40;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.securityCnt p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 15px 70px;
+    max-width: max-content;
+    margin: auto;
+    line-height: 27px;
+}
+
+.firstOl {
+    display: block;
+    max-width: max-content;
+    margin: auto;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.securityCnt ol li {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.secondOl {
+    display: block;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.regPageCover {
+    position: absolute;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+
+.wholeRegistration {
+    padding-top: 140px;
+    padding-bottom: 54px;
+    position: relative;
+}
+
+.registrationForm {
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px #84bdc4;
+    border: 2px solid rgb(0, 169, 191);
+    background: #f6fcff;
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+}
+
+.reginputStyle {
+    display: block;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(183, 183, 183);
+    outline: none;
+}
+
+.reginputStyle:focus {
+    border: 1px solid rgb(93, 192, 197);
+}
+
+.registrationForm label {
+    font-size: 18px;
+}
+
+.registrationForm h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #29b8e5;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #29bae5;
+    text-align: center;
+}
+
+.registrationForm form {
+    margin-top: 20px;
+}
+
+.registerBtn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: none;
+    background: #009688;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.red-text {
+    color: #ff0000;
+    padding-bottom: 10px;
+}
+
+aside {
+    width: 300px;
+    background: #d7d7d7;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+    transition: 0.5s;
+    float: left;
+    z-index: 4;
+}
+
+aside:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.userGreet {
+    padding: 15px 10px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+aside ul {
+    text-align: center;
+}
+
+aside ul li a {
+    font-size: 18px;
+    padding: 10px 5px;
+    border-top: 1px solid #fff;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    transition: .5s;
+}
+
+aside ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+.asideHomeFlex {
+    padding-top: 80px;
+    position: relative;
+}
+
+.privateHomeCnt {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.privateHomePic {
+    width: 100%;
+    height: 100%;
+    background-image: url('paper3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    z-index: 3;
+    opacity: 0.7;
+    transition: .5s;
+}
+
+.privateTitle {
+    top: 150px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff6700;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+}
+
+#nav-icon3 {
+    width: 55px;
+    height: 42px;
+    position: relative;
+    margin: 19px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: none;
+}
+
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #404d40;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nav-icon3 span:nth-child(4) {
+    bottom: 0;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .flex1 .ctg-cnt a {
+        font-size: 15px;
+    }
+    .login-cnt a,
+    .register-cnt a {
+        font-size: 17px;
+    }
+    .login-cnt {
+        width: 100px;
+        margin-left: 25px;
+    }
+    .register-cnt {
+        width: 100px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    .logo-container {
+        padding-right: 30px;
+    }
+    .aboutFlex {
+        flex-direction: column-reverse;
+    }
+    .aboutCnt {
+        max-width: 1000px;
+    }
+    .aboutPic1 {
+        height: 300px;
+    }
+    .homeSlogan {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .flex3 {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .homeSlogan,
+    .loginForm {
+        margin: unset;
+    }
+    .homeSlogan {
+        padding-bottom: 30px;
+    }
+    .sidebarCnt {
+        height: calc(100% - 80px);
+        position: absolute;
+        width: 300px;
+        background: #fff;
+        z-index: 5;
+        top: 80px;
+        right: 0;
+        transform: translateX(100%);
+        transition: .5s;
+        display: block;
+    }
+    .meanTitle {
+        font-size: 25px;
+    }
+    .securityTitle {
+        font-size: 25px;
+        padding: 50px 25px;
+    }
+    .privateTitle {
+        font-size: 24px !important;
+    }
+    #serviceTable1,
+    #serviceTable2 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .meanContainer p,
+    .securityCnt p,
+    .securityCnt ol li {
+        font-size: 16px;
+    }
+    .questionP {
+        font-size: 18px;
+    }
+    footer {
+        height: auto;
+        padding: 25px 30px;
+    }
+    .contact-footer {
+        width: max-content;
+        flex-direction: column;
+        display: flex;
+        padding-bottom: 20px;
+        margin: auto;
+        align-items: unset;
+        border-bottom: unset;
+    }
+    .socialCnt,
+    .actNumber {
+        padding-bottom: 12px;
+    }
+    .copyright {
+        border-top: 1px solid #9E9E9E;
+    }
+    #nav-icon3 {
+        display: block;
+    }
+    .flex1,
+    .flex2 {
+        display: none;
+    }
+    .flex2Mob {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        justify-content: center;
+        border-bottom: 1px solid darkgray;
+    }
+    .flex1Mob {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex1Mob .ctg-cnt {
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .flex1Mob .ctg-cnt a {
+        display: block;
+        text-decoration: none;
+        transition: .3s;
+        color: #000;
+        font-weight: bold;
+    }
+    .sideCover {
+        display: none;
+        height: calc(100% + 45px);
+        position: absolute;
+        width: 100%;
+        background: black;
+        opacity: 0;
+        z-index: 4;
+        top: -45px;
+        right: 0;
+    }
+    .flex1Mob .ctg-cnt a:hover {
+        color: #fff;
+        background: darkgray;
+    }
+}
